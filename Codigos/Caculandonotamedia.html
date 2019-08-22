@@ -1,0 +1,42 @@
+
+<script>
+//Criar o sistema de avaliação da Unifor em JavaScript
+var aluno = prompt("Qual nome do aluno?");
+
+function mostra(frase)
+{document.write(frase+"<br>");}
+
+function CalculoNota(AV){
+	//perguntando quantidades de notas Avaliação
+	quantidadesNotas = parseInt(prompt("Quantidade de notas da "+AV+"?"));
+	mostra("<p> Notas da "+AV+" com "+quantidadesNotas+" Avaliações");
+	var soma = 0;
+	var i = 0;
+		while( i < quantidadesNotas){
+			nota = parseFloat(prompt("Qual a "+(i+1)+"ºnota?"));
+			mostra ((i+1)+"ºNota = " + nota);
+			soma = soma + nota;
+			i = i + 1;
+		}
+	var media = soma / quantidadesNotas
+	mostra ("Média = "+media)
+	return media;
+}
+var av1 = CalculoNota("AV1")
+var av2 = CalculoNota("AV2")
+var mediaDasPrimeirasNotas = (av1 + av2) / 2;
+mostra ("<p>A média das primeiras notas é "+mediaDasPrimeirasNotas.toFixed(2))
+	if(mediaDasPrimeirasNotas < 4) {
+		mostra(aluno+" Foi Reprovado :(");
+	}else{
+		var av3 = CalculoNota("AV3")
+		if(mediaDasPrimeirasNotas >= 4){
+			var mediaFinal =  (mediaDasPrimeirasNotas + av3) / 2;
+			if(mediaFinal >= 5){
+				mostra("<p>"+aluno+" Foi aprovado com " + mediaFinal.toFixed(2));
+			}else{
+			mostra("<p>"+aluno+" Foi Reprovado");}
+		}
+	}
+
+</script>

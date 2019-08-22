@@ -1,0 +1,43 @@
+<script>
+
+    var aluno = prompt("Qual nome do aluno? ");
+
+    function mostra(frase) { document.write(frase + "<br>"); }
+    //Função para calcular as Avaliações
+    function CalculoNotas(Avaliação) {
+        var soma = 0;
+        var Qtdnotas = parseInt(prompt("Quantas provas " + aluno + " teve nesta " + Avaliação + " : "));
+        //armazenar notas
+        //crio um while com i menor que a quantidade de notas
+		mostra("Notas da "+Avaliação+" com "+Qtdnotas+" Avaliações");
+        var i = 0
+        while (i < Qtdnotas) {
+            var nota = parseFloat(prompt("Armazene a " + (i + 1) + "º nota"));
+			mostra((i + 1) + "º nota = " + nota);
+            //faço a soma das notas pra depois divitdir
+            soma = soma + nota;
+            i = i + 1;
+        }
+        var media = soma / Qtdnotas
+        return media;
+    }
+    var av1 = CalculoNotas("AV1");
+    var av2 = CalculoNotas("AV2");
+    var av3 = CalculoNotas("AV3");
+    var mediaDasPrimeirasNotas = (av1 + av2) / 2;
+
+    if (mediaDasPrimeirasNotas < 4) 
+	{mostra("<p>"+aluno + " infelizmente Foi Reprovado");
+	}else {
+		if (mediaDasPrimeirasNotas >= 4) {
+			var mediaFinal = (mediaDasPrimeirasNotas + av3) / 2;
+			if (mediaFinal >= 5) {
+				mostra("<p>"+aluno + " Foi Aprovado com = " + mediaFinal.toFixed(2));
+			}else{
+				mostra("<p>"+aluno + " infelizmente Foi Reprovado");
+			}
+		}else{
+			mostra("<p>"+aluno + " infelizmente Foi Reprovado");
+		}
+	}
+</script>

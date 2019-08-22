@@ -1,0 +1,40 @@
+﻿<meta charset="UTF-8">
+<script>
+
+function mostra(frase)
+{document.write(frase+"<br>");};
+function fala(frase)
+{document.write(frase+"<p>");};
+function Linha()
+{document.write("<hr>");};
+
+fala("<h2>Repetição Exercício 1:</h2>")
+
+var contador, condicaodeparada, numero;
+contador = 2
+condicaodeparada = 10
+//numero = parseInt(prompt("que numero deseja elevar ate "+condicaodeparada + " ?"))
+
+fala("<h4>Exibir a tabuada de "+numero+"</h4>")
+
+while(contador <= condicaodeparada)
+{
+mostra(contador + " ^ " + numero + " = " + Math.pow(contador,numero));
+//atualizando contador
+contador = contador + 1 ;
+};
+
+</script>
+<h4>Copa do Mundo</h4><Hr>
+<script>
+var contador, condicaodeparada, numero;
+contador = 1
+condicaodeparada = prompt("Até que numro deseja contar? ")
+numero = prompt("Qual numero deseja mutiplicar até " +condicaodeparada)
+
+while(contador <= condicaodeparada){
+mostra(numero + " x " + contador + " = " + contador*numero)
+contador = contador + 1
+}
+
+</script>

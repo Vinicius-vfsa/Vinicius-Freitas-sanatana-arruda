@@ -1,0 +1,13 @@
+<script>
+function mostra( frase )
+{document.write(frase+"<br>");};
+
+//var Time = prompt ("Qual nome do seu time? ") 
+var vitorias = prompt("Quantos jogos seu time ganho? ")
+var empates = prompt("Quantos jogos seu time empatou? ")
+var pontos = parseInt(vitorias*3) + empates;
+mostra ("Seu time Tem " + pontos + " pontos!")
+
+if(pontos > 28)
+{mostra("")}
+</script>

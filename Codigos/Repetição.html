@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+<script>
+function mostra(frase)
+{document.write(frase+"<br>");};
+function fala(frase)
+{document.write(frase+"<p>")}
+function Linha()
+{document.write("<hr>")}
+
+fala("<h2>Repetição Exercício 1:</h2>")
+
+var contador, condicaodeparada;
+contador = 1
+condicaodeparada = parseInt(prompt("digite um numero maior que 1 "));
+fala("<h4>Exibindo numeros impares de "+contador+" e "+condicaodeparada+"</h4>")
+
+while(contador <= condicaodeparada)
+{
+mostra("número ="+contador);
+//atualizando contador
+contador = contador+2;
+};
+
+</script>
+
+
+

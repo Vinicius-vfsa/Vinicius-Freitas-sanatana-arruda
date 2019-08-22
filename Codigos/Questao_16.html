@@ -1,0 +1,18 @@
+<meta charset="UTF-8">
+
+<script>
+	function hipotenusa (c1, c2) {
+		var h = (c1 ** 2) + (c2 ** 2);
+        document.write("hipotenusa é "+h+"² que em raiz fica ")
+		return Math.sqrt(h);
+	}
+
+	var cateto1 = prompt("Digite o valor do cateto.");
+	var cateto2 = prompt("Digite o valor do cateto segundo.");
+
+	var chamaFuncao = hipotenusa(cateto1, cateto2);
+
+	document.write(" O valor da hipotenusa é " + chamaFuncao.toFixed(5));
+
+
+</script>

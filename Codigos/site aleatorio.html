@@ -1,0 +1,234 @@
+<meta chartset="UTF-8">
+<h3>Esta vendo isso !se sim você sabe ler</h3>
+	<strong>Não</strong> consigo fazer nada além de mostrar Isso?
+<h4>Se inscreva Prouni e ganhe uma bolsa! </h4>
+<a href='http://prouniportal.mec.gov.br'> clicando aqui</a>
+<hr>
+<h3>Capitulo 1 e 2</h3><hr>
+<script>
+/*
+	var ano = 2018;
+	document.write("minha idade é : "+18); 
+	document.write("<br>");
+	document.write("idade do michael é : "+19); 
+	document.write("<br>");
+	document.write("idade do joshua é : "+20);
+	document.write("<br>")
+	document.write("Eu nasci em : "+(ano-18));
+	p()
+	document.write("machael nasceu em : "+(ano-19));
+	p()
+	document.write("joshua nasceu em : "+(ano-20));
+	p()
+	var eu = 18;
+	var michael = 19;
+	var joshua = 20;
+	var total = eu + michael + joshua;
+	var media = total / 3;
+	function p() 
+	{document.write ("<br>");};
+	var mostra = function(frase)
+	{document.write(frase); 
+	p()};
+	document.write("A soma das idades é: ");
+	document.write(total + "<br>");		  	
+	document.write("A media de idade é: " + Math.round(media));
+	document.write("<br>");
+	mostra ("Olha so,deu certo!!");
+*/
+</script><hr>
+
+<h3>Capitulo 3</h3><hr>
+<h4>Medindo IMC</h4>
+<hr>
+<script>
+
+function linha()
+{document.write("<hr>");};
+
+function mostra(frase)
+{document.write(frase+"<br>");};
+
+function fala(frase)
+{document.write(frase+"<p>");};
+
+/* function calculoIMC(altura, peso)
+{var imc = peso / (Math.pow(altura,2));
+return imc};
+
+	var Nome = prompt ("Qual seu Nome? ");
+	var altura = prompt (Nome+" ,Qual sua altura? (coloque altura em Metros) Ex: 1(.)80");
+	var peso =  prompt(Nome+", Qual Seu Peso? Coloque peso em Kilograma");
+	var imc = calculoIMC(altura, peso);
+
+fala("Usuario: " + Nome );
+mostra("Sua Peso e:  "+ peso);
+mostra("Sua altura:  "+ altura);
+fala("Seu IMC : " + Math.round(imc));
+
+	if( imc < 19 ){
+mostra(Nome + " ,Você tem que Comer mais Esta muito Magro");
+};
+	if( imc >= 24.5 ){
+mostra(Nome + " ,Você precisa fazer exercicio esta com Sobrepeso");
+};
+	if( imc >= 19 ){ 
+		if(imc < 24.5 ){
+mostra(Nome + " , Seu imc Mostra Peso e altura ideal parabéns! se divirtase!!");
+};
+};
+
+*/
+</script>
+<hr>
+<h3>Capitulo 4</h3>
+<h4>Adivinhe o Numero</h4>
+<hr>
+<script>
+/*
+function fala(frase)
+{document.write(frase+"<p>");};
+function mostra(frase)
+{document.write(frase+"<br>");};
+
+function sorteio(numero) {
+var NP = Math.round(Math.random()*numero);
+return NP }
+
+var NP = sorteio(10) //NP = NumeroPensado
+var chute = prompt("Adivinhe no numero de 0 a 10 que eu estou pensando: ");
+if(chute == NP ){
+	mostra ("Nossa "+Nome+" Você adivinhou Direitinho meu numero foi : " + NP);
+} else {
+	mostra("EROOU, pensei no "+ NP )};
+	mostra("<h5>Questão 4.6</h5>")
+if(isNaN(chute)){
+	mostra(chute+"<strong>?ESSA Poha Não e um Numero!!</strong>")};
+if(chute > 10){
+	alert("Voce sorteou um numero maior que 10 ");};
+if(chute > NP){
+	mostra("Numero que voce chuto é maior que "+NP);};
+if(chute < NP){
+	mostra("Numero que voce chuto é menor que "+NP);};
+*/
+</script> 
+<hr>
+<h3>Calculando bascra</h3>
+<hr>
+
+<script type="text/javascript">
+/*
+	var a, b, c, delta, x1, x2;
+
+function CalculeBascra(a, b, c) {
+	x1 = ((b * (-1)) + Math.sqrt(delta))/(2 * a);
+	x2 = ((b * (-1)) - Math.sqrt(delta))/(2 * a);
+};
+
+
+function CalculeDelta(a, b, c) {
+	return Math.pow(b, 2) - (4 * a * c)
+};
+
+
+	//a = +prompt("indique o valor de a: ");
+	//b = +prompt("indique o valor de b: ");
+	//c = +prompt("indique o valor de c: ");
+	delta = CalculeDelta(a, b, c);
+
+CalculeBascra(a, b, c)
+
+mostra("Delta: " + delta.toFixed(2));
+mostra("a: |" + a + "| o b: | " + b + " | e o c: " + c );
+mostra("X1 = | " + x1 + " | e X2 =  " + x2);
+*/
+</script>
+<hr>
+<h3>Capitulo 5</h3>
+<h4>Multiplicador</h4>
+<hr>
+
+<script type="text/javascript"> 
+/*
+var contador, multiplicador, parada;
+
+multiplicador = parseInt(prompt("Qual número gostaria de multiplicar? "));
+parada = parseInt(prompt("até quanto? "));
+
+fala ( "<h4>" + Nome + " quer Multiplicar " + multiplicador + " até " + parada + "</h4>")
+
+for(contador = 1 ; contador <= parada ; contador++){
+mostra(multiplicador+ " x " + contador + " = " + multiplicador*contador);
+} 
+*/
+</script>
+
+<h4>ContadorDeFamilias</h4>
+
+<script>
+
+	var totaldefamiliares, idades, somadasidades;
+	totaldefamiliares = prompt("Quantos familiares vocês tem?");
+
+	somadasidades = 0
+	var i = 1 
+		while(i <= totaldefamiliares){
+			idades = parseInt(prompt("Qual a idade do "+i+"º membro da familia?"));
+			somadasidades = somadasidades + idades;
+			i++
+		}
+
+	var media = somadasidades/totaldefamiliares
+
+	mostra("Media das idades de seus familiares e " + media.toFixed(2)) ;
+
+</script>
+
+<hr> 
+<h3>O jogo da adivinhação
+dos números</h3>
+<hr>
+
+<script>
+/*
+var CH, NP, chute, contador, parada;
+
+function sorteio(numero)
+{NP = Math.round(Math.random()*numero); return NP;}
+
+NP = sorteio(10)// NP = NumeroPensado
+alert("você so tem 3 tentativas");
+alert(NP)
+
+for (contador = 1 ; contador <= 3; contador++){
+	chute = Math.round(prompt("Qual numero  que eu estou a pensar? (De 1 a 10) "));
+	if(isNaN(chute))
+		{alert("este numero é invalido");}
+		if(chute > 10 && chute < 0 )
+			{alert("Este Numero precisa ser de 0 a 10!");}
+			if(chute == NP)
+				{alert("Parabéns Você acertou!! Pensei No " + NP + " mesmo");break;}
+}
+if(chute == NP)
+	else {mostra("Erooou! Eu tinha pensado no " + NP);}
+*/
+</script>
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
