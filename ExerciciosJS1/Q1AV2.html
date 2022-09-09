@@ -1,0 +1,47 @@
+<script>//item a 
+//definindo variável
+var v = [];
+//entrada
+var n = parseInt(prompt("Digite um valor "));
+
+//saida
+document.write("n = "+n+" valores <p>");
+//Repetindo n vezes 
+for(var i=0;i<n;i++){
+v[i] =  prompt("Digite numero no valor "+(i+1)+": ") 
+	document.write("vetor ["+i+"] = "+v[i]+ "<br>")
+}
+var p = parseInt(prompt("Qual numero que voce escolheu deseja procurar ? "));
+achei = false
+i = 0 
+while(i < n && !achei){
+	if(v[i] == p) {
+		document.write
+	document.write("Encontrei "+p+" em sua lista");
+	achei = true
+	}
+i++
+}
+//item b e c
+document.write("<p><h4>Multiplicação dos vetores</h4>");
+i = 0;
+var termo; 
+var soma = 0
+var Qtdtermos = 0
+while(i < n){
+	termo = v[i]*(i+1)
+	soma = soma + termo
+	document.write("<br>"+v[i]+" x "+(i+1)+" = "+termo);
+	if(v[i] > (i+1)) {
+	Qtdtermos = Qtdtermos + 1;
+	}
+i++
+}
+//item c
+document.write("<br>soma dos (vetores x i) e  " +soma+"<br>");
+document.write("quantidade de termos maior que i e  "+ Qtdtermos);
+	
+	
+
+
+</script>

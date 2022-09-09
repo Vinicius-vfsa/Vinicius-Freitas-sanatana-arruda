@@ -1,0 +1,23 @@
+//comandos <script></script>
+document.write(""):comando de exibição
+//comandos HTML   
+//ordem crescente define o tamanho da palavra (Ex:+h1...h6-)
+<h3></h3>h4,h5,h6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

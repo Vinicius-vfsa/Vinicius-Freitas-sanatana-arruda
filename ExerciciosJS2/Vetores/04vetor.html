@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>ALl Your Breath take</title>
+</head>
+
+<body>
+    <hr>
+    <img src="img/Q4.png">
+    <hr>
+    <script>
+        function randomMaxMin(min, max) {
+            return Math.random() * (max - min) + min
+        }
+
+        function frs(f) {
+            document.write(f + "<br>")
+        }
+
+        var n, vetor = [],
+            vetorP = [8],
+            vetorN = [8];
+
+        for (i = 0; i < 8; i++) {
+
+            n = parseFloat(Math.random() * 10)
+            if (n < 5) {
+                vetor[i] = parseInt(Math.random() * 10) + 1 //parseInt(prompt('numeros: '))
+            } else {
+                vetor[i] = parseInt(Math.random() * 10) * (-1) - 1 //parseInt(prompt('numeros: '))
+            }
+
+            console.log(n)
+
+            if (vetor[i] < 0) {
+                vetorN[i] = vetor[i]
+                vetorP[i] = ' '
+            } else {
+                vetorN[i] = ' '
+                vetorP[i] = vetor[i]
+            }
+
+        }
+
+        console.log(vetor)
+        console.log(vetorP)
+        console.log(vetorN)
+
+        frs("Vetor = [ " + vetor + ' ]');
+        frs("vetor positivo = [ " + vetorP + ' ]');
+        frs("vetor Negativo = [ " + vetorN + ' ]');
+    </script>
+</body>
+
+</html>

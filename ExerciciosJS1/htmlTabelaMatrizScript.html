@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TabelaHtml</title>
+        <meta charset="UTF-8">
+        <style>
+        table,th,td{
+            border: 1px solid rgb(26, 21, 21)
+        }
+        th{
+            background-color: rgba(134, 137, 134, 0.78)
+
+        }
+        td{
+            background-color: rgb(18, 221, 221)
+        }
+        </style>
+    </head>
+    <body>
+        <h1>tabelaMatrizhtml</h1>
+            <p>Tabela  Matriz</p>
+        <script>
+            var matriz,colunas,t;
+            colunas = 3 //parseInt(prompt("Indique Numero de colunas: "))
+            linhas = 3 //parseInt(prompt("Indique numero de linhas: "))
+        
+            matriz = new Array(linhas);
+
+            for(i=0;i<linhas;i++){
+                matriz[i]= new Array (colunas);
+                for(j=0;j<colunas;j++){
+                    var n  = parseInt(Math.random()*10) //parseInt(prompt(""))
+                    matriz[i][j] = n
+                }
+            }
+            document.write("<table style=width: 100%>")
+            for(l=0;l<1;l++){
+                document.write("<tr>")
+                document.write("<th >"+"  "+"</th>")
+                for(c=0;c<colunas;c++){
+                    //var n = prompt("Digite titulo da "+(c+1)+" coluna: ")
+                    document.write("<th>")
+                    document.write('Coluna '+(c+1))
+                    document.write("</th>")
+                }
+                document.write("</tr>")
+            }
+            for(c=0;c<linhas;c++){
+                //var n =  prompt("Digite titulo da "+(l+1)+" Linha")
+                document.write("<tr>")
+                document.write("<th align = center> Linha "+(c+1)+"</th>")
+                for(l=0;l<colunas;l++){
+                    document.write("<td align = center>")
+                    document.write(matriz[c][l])
+                    document.write("</td>")
+                }
+                document.write("</tr>")
+            }
+            document.write("</table>")
+        </script>
+        <hr><h2>Questao 3</h2>
+        <h4>Uma fábrica de calçados é composta por trabalhadores
+        classificados em três perfis de produtividade de acordo com a
+         quantidade de peças produzidas como mostra a tabela abaixo.</h4>
+        <p>  <strong>3.</strong> Os trabalhadores da classe 1 recebem um salário mínimo de R$880,00 salario minimo, sem adicional.
+        Os da classe 2 recebem o salário mínimo mais um adicional de 2% deste salário por cada peça produzida acima das 30 peças iniciais. Os da classe 3,
+        recebem o salário mínimo mais um adicional de 4% desse salário por cada peça produzida
+        acima das 30 peças iniciais. Escreva um programa em javascript que: <p>
+        a) Leia pelo teclado e armazene na primeira coluna de uma matriz 5x3 a quantidade de peças produzidas por 5 funcionários;<br>
+        b) Calcule e armazene na segunda coluna dessa matriz o adicional recebido por cada funcionário de acordo com seu perfil de produtividade;<br>
+        c) Calcule e armazene na terceira coluna da matriz o salário recebido por cada funcionário respectivamente;<br>
+        d) Calcule e mostre na tela quanto a fábrica gastou com a folha salarial;<br>
+        e) Calcule e mostre na tela a quantidade de peças produzidas.</p>
+        <hr>
+
+        <script>
+
+            function randomMaxMin(min, max){
+            return Math.random() * (max - min) + min;
+            }
+
+            /*for(i=0;i<;i++){
+                for(j=0;j<;j++){
+                }
+             }
+            */
+            colunas = 3 //parseInt(prompt("Indique Numero de colunas: "))
+            linhas = 5 //parseInt(prompt("Quantidade de Funcionarios: "))
+
+            var matriz = new Array(linhas);
+            var pecasoma = 0;
+            var salariosoma = 0;
+            for(i=0;i<linhas;i++){
+                matriz[i]= new Array (colunas);
+                var salario = new Array (colunas)
+                for(j=0;j<colunas;j++){
+                    var salariominimo = 880;
+                    if(j == 0) {
+                        var pecas = parseInt(randomMaxMin(15, 100)); //parseInt(prompt("Quantidade de peças do "+(i+1)+"Funcinario: "))
+                        matriz[i][j] = pecas;
+                        pecasoma = pecasoma + pecas;
+                    }
+
+                    if(j == 1) {
+                        var doisporcestoDoSalario = salariominimo * 0.02
+                        var quatroporcentoDoSalario = salariominimo * 0.04
+                        var pecasProduzidas = parseInt(matriz[i][0] - 30)
+                       if(matriz[i][0] > 30 && matriz[i][0] <= 50 ){
+                           matriz[i][1] = doisporcestoDoSalario*( pecasProduzidas )
+                           matriz[i][1] =  Math.floor( matriz[i][1] )
+                       }
+                       if( matriz[i][0] <= 30 ) {
+                           matriz[i][1] = 0;
+                       }
+                       if( matriz[i][0] > 50){
+                           matriz[i][1] = quatroporcentoDoSalario* pecasProduzidas
+                           matriz[i][1] = Math.floor( matriz[i][1] )
+                       }
+                    }
+                    if( j == 2 ){
+                        matriz[ i ][ 2 ]  = Math.floor(matriz[i][1]) + salariominimo
+                        salariosoma = salariosoma + matriz[i][2]
+                    }
+                }
+            }
+            //console.log(matriz)
+
+            document.write("<table frame='hsires' style= width: 100%>")
+            document.write("<caption>Tabela Funcionarios Fabrica De Calçados</caption>")
+            for(l=0;l<1;l++){
+                document.write("<tr>")
+                document.write("<th>"+"  "+"</th>")
+                for(c=0;c<colunas;c++) {
+                    if (c == 0) {
+                        //var n = prompt("Digite titulo da "+(c+1)+" coluna: ")
+                        document.write("<th>")
+                        document.write("Peças")
+                        document.write("</th>")
+                    }
+                    if (c == 1) {
+                        document.write("<th>")
+                        document.write("Adicional")
+                        document.write("</th>")
+                    }
+                    if(c == 2){
+                        document.write("<th>")
+                        document.write("Salario")
+                        document.write("</th>")
+                    }
+                }
+                document.write("</tr>")
+            }
+            for(c=0;c<linhas;c++){
+                //var n =  prompt("Digite titulo da "+(l+1)+" Linha")
+                document.write("<tr>")
+                document.write("<th align = center> Funcionario "+(c+1)+"</th>")
+                for(l=0;l<colunas;l++){
+                    document.write("<td align = center>")
+                    document.write(matriz[c][l])
+                    document.write("</td>")
+                }
+                document.write("</tr>")
+            }
+            document.write("</table>");
+            document.write("<p>")
+            document.write("<p>")
+            document.write("<p>")
+            document.write("<table frame='hsides' max-style= width: 100%>")
+            for(l=0;l<1;l++){
+                document.write("<tr>");
+                document.write("<th>"+"  "+"</th>");
+                for(c=0;c<colunas;c++) {
+                    if(c == 0) {
+                        document.write("<th>");
+                        document.write("Peças");
+                        document.write("</th>");
+                    }
+                    if(c == 1) {
+                        document.write("<th>");
+                        document.write("Salarios");
+                        document.write("</th>");
+                    }
+                }
+                document.write("</tr>");
+            }
+
+            for(c=0;c<1;c++){
+                //var n =  prompt("Digite titulo da "+(l+1)+" Linha")
+                document.write("<tr>");
+                document.write("<th align = center> Total </th>");
+                for(l=0;l<colunas;l++){
+                    if(l == 0) {
+                        document.write("<td align = center>")
+                        document.write(pecasoma);
+                        document.write("</td>")
+                    }
+                    if(l == 1){
+                        document.write("<td align = center>")
+                        document.write (salariosoma)
+                        document.write("</td>")
+                    }
+                }
+                document.write("</tr>");
+            }
+            document.write("</table>")
+        </script>
+
+    </body>
+</html>

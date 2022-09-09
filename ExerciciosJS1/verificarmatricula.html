@@ -1,0 +1,31 @@
+<html>
+    <script>
+    
+    function write(f){
+        document.write(f+'<br>');
+    }
+
+     
+
+var numerosDigitados = [8,3,4,1,5,8,4]
+var matricula = [1,8,1,3,3,8,0]
+var verificarMatricula = 0
+var contr = false;
+write('numero da matricula: '+ matricula)
+write('numero digitado: '+numerosDigitados)
+for(var i = 0; i < 7;i++){
+    for(var o = 0;o < 7;o++){
+
+        if(matricula[o] == numerosDigitados[i] && contr == false){
+            document.write(numerosDigitados[i]+',');
+            contr = true;
+        }else{
+            
+        }
+        //write(i +' '+ o)
+    }
+    contr = false;
+}
+
+    </script>
+</html>

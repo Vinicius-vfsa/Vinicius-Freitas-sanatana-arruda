@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>02-vetor</title>
+</head>
+<body>
+	Nome: Vinicius Freitas <br>
+	matricula: 1813380
+	<hr>
+	<b>02. Uma pequena loja de artesanato possui apenas um vendedor e comercializa dez tipos de objetos.</b> <p>
+		
+	O vendedor recebe, mensalmente, salário de R$ 545,00, acrescido de 5% do valor total de suas vendas. O valor unitário dos objetos deve ser informado e armazenado em um vetor; a quantidade vendida de
+cada peça deve ficar em outro vetor, mas na mesma posição.Crie um programa que receba os preços
+ e as quantidades vendidas, armazenando-os em seus respectivos vetores (ambos com tamanho dez).<br>
+&nbsp;Depois, determine e mostre:<br>
+	&nbsp; &nbsp;- um relatório contendo: quantidade vendida, 
+	valor unitário e valor total de cada objeto.<br>
+	&nbsp; &nbsp;- o valor do objeto mais vendido e sua posição no vetor (não se preocupe com empates).<br>
+	&nbsp; &nbsp;- Ao final, deverão ser mostrados o valor geral das vendas e o valor da comissão que será paga ao vendedor;
+	<hr>
+	<script>
+
+		function write(f){
+			document.write(f+"<br>");
+		}
+		function randomMaxMin(min, max){
+			return Math.random()*(max - min) + min
+		}
+
+
+		var preco  = []
+		var qnt_vend = []
+		var soma_prec = 0;
+		var maior = [0]
+		var pg_i;
+		var comis;
+
+		for(let i=0;i<10;i++){
+			preco[i] = parseFloat(randomMaxMin(0.9, 50))//pareFloat(prompt("Valor do produto"))
+		}
+		for(let i=0;i<10;i++){
+			qnt_vend[i] = parseInt(randomMaxMin(2, 40))//pareFloat(prompt("Quantidade vendidas"))
+			if(qnt_vend[i] > maior){
+				maior = qnt_vend[i]
+				pg_i = i
+			}
+		}
+		write("<h3>Lista: </h3>")
+		for(let i=0;i<10;i++){
+			let n = preco[i]
+			n = n.toFixed(2)
+			var u = qnt_vend[i]*preco[i]
+			write((i+1)+"ºpeça = R$"+n+"<br>Quantidade vendida: "+qnt_vend[i]+"<br>Valor total = R$"+u.toFixed(2)+"<p>")
+			soma_prec += u
+		}
+		
+		comis = soma_prec*0.05
+		comis = comis.toFixed(1)
+		write("Mais Vendido:<br>"+(pg_i+1)+"ºpeça["+pg_i+"] = R$"+preco[pg_i].toFixed(1)+"<br>Quantidade: "+qnt_vend[pg_i]+"<p>Valor Total = R$"+ Math.round(soma_prec)+"<br>Rogerinho ira Receber: R$"+comis)
+
+		console.log(preco)
+		console.log(qnt_vend)
+		console.log('\nmaior: '+maior)
+		console.log('indice: '+pg_i)
+		console.log(soma_prec)
+		console.log(comis)	
+
+	</script>
+</body>
+</html>

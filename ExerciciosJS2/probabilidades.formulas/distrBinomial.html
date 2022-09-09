@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+   function fatorial(a){
+   		if(a == 0){
+   			return 1
+   		}else{
+	   		var f = 1;
+	   		var i=0;
+	   		while(i < a){
+	   			f = f*(a-i)
+	   			i++
+	   		}
+	   	}
+   		return f;
+   	}
+   	function combinacao(c, o){
+   		return (fatorial(c)/(fatorial(o)*fatorial(c-o)))			
+   	}
+
+</script>
+</body>
+</html>

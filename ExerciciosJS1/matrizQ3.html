@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Matriz Tabela</title>
+</head>
+<style>
+    table{
+        border: 2px solid #040404;
+    }
+    th{
+        background-color: grey;
+    }
+    td{
+        background-color: orangered;
+    }
+</style>
+<body>
+<hr><h3>Questao 3</h3>
+<h5>Uma fábrica de calçados é composta por trabalhadores
+    classificados em três perfis de produtividade de acordo com a
+    quantidade de peças produzidas como mostra a tabela abaixo.</h5>
+<p>  <b>3.</b> Os trabalhadores da classe 1 recebem um salário mínimo de R$880,00 salario minimo, sem adicional.
+    Os da classe 2 recebem o salário mínimo mais um adicional de 2% deste salário por cada peça produzida acima das 30 peças iniciais. Os da classe 3,
+    recebem o salário mínimo mais um adicional de 4% desse salário por cada peça produzida acima das 30 peças iniciais. Escreva um programa em javascript que: <p>
+    a) Leia pelo teclado e armazene na primeira coluna de uma matriz 5x3 a quantidade de peças produzidas por 5 funcionários;<br>
+    b) Calcule e armazene na segunda coluna dessa matriz o adicional recebido por cada funcionário de acordo com seu perfil de produtividade;<br>
+    c) Calcule e armazene na terceira coluna da matriz o salário recebido por cada funcionário respectivamente;<br>
+    d) Calcule e mostre na tela quanto a fábrica gastou com a folha salarial;<br>
+    e) Calcule e mostre na tela a quantidade de peças produzidas.<br>
+    c) Informe a média da turma na “NP2 Prática”;<br>
+    d) Informe a média geral da turma em todas as provas.</p>
+<hr>
+
+<script>
+
+    function randomMaxMin(min, max){
+        return Math.random() * (max - min) + min;
+    }
+
+    /*for(i=0;i<;i++){
+        for(j=0;j<;j++){
+        }
+     }
+    */
+    colunas = 3 //parseInt(prompt("Indique Numero de colunas: "))
+    linhas = 5 //parseInt(prompt("Quantidade de Funcionarios: "))
+
+    var matriz = new Array(linhas)
+
+        for(var i=0;i<linhas;i++){
+            matriz[i]= new Array (colunas);
+        for(j=0;j<colunas;j++){
+            var salariominimo = 880;
+            if( j == 0 ){
+                matriz[i][j] = parseInt(randomMaxMin(880, 998))
+            }
+            if(j == 1) {
+                var pecas = parseInt(randomMaxMin(15, 100)); //parseInt(prompt("")
+                matriz[i][j] = pecas;
+            }
+            if( j == 2 ) {
+                var doisporcentoDoSalario = matriz[i][0] * 0.02
+                var quatroporcentoDoSalario = matriz[i][0] * 0.04
+                var pecasProduzidas = matriz[i][1] - 30
+                if(matriz[i][1] > 30 && matriz[i][1] <= 50 ) {
+                    matriz[i][j] = doisporcentoDoSalario*( pecasProduzidas )
+                    matriz[i][j] =  Math.floor( matriz[i][j] )
+                }
+                if( matriz[i][1] <= 30 ) {
+                    matriz[i][j] = 0;
+                }
+                if( matriz[i][1] > 50) {
+                    matriz[i][j] = quatroporcentoDoSalario* pecasProduzidas
+                    matriz[i][j] = Math.floor( matriz[i][j] )
+                }
+            }
+            if( j == 3 ){
+                matriz[ i ][ 3 ]  = matriz[i][2] + matriz[i][0]
+            }
+        }
+    }
+    console.log(matriz)
+    soma = 0;
+    for(i=0;i<linhas;i++){
+        soma = soma + matriz[i][3]
+    }
+    console.log(soma)
+
+    document.write("<table border='black'  frame='hsires' style=width: 100%>")
+    document.write("<caption>Tabela Funcionarios Fabrica De Calçados</caption>")
+    for(l=0;l<1;l++){
+        document.write("<tr>")
+        document.write("<th>"+"  "+"</th>")
+        for(c=0;c<colunas;c++) {
+            if( c == 0 ){
+                document.write("<th>")
+                document.write("Salario")
+                document.write("</th>")
+            }
+            if (c == 1) {
+                //var n = prompt("Digite titulo da "+(c+1)+" coluna: ")
+                document.write("<th>")
+                document.write("Peças")
+                document.write("</th>")
+            }
+            if (c == 2) {
+                document.write("<th>")
+                document.write("Adicional")
+                document.write("</th>")
+            }
+            if(c == 3){
+                document.write("<th>")
+                document.write("SalarioAdicional")
+                document.write("</th>")
+            }
+        }
+        document.write("</tr>")
+    }
+    for(c=0;c<linhas;c++){
+        //var n =  prompt("Digite titulo da "+(l+1)+" Linha")
+        document.write("<tr>")
+        document.write("<th align = center> Funcionario "+(c+1)+"</th>")
+        for(l=0;l<colunas;l++){
+            document.write("<td align = center>")
+            document.write(matriz[c][l])
+            document.write("</td>")
+        }
+        document.write("</tr>")
+    }
+    document.write("</table>")
+</script>
+</body>
+</html>

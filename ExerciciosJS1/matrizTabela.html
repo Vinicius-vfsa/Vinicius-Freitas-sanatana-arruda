@@ -1,0 +1,69 @@
+
+<meta charset="utf-8">
+
+<html><br><hr>2. O professor de uma pequena sala de aula, dispÃµe as notas dos seus 5 alunos em cada uma das 4 avaliaÃ§Ãµes aplicadas em uma tabela conforme o modelo abaixo.<br><br></html>
+
+<script>
+	matrix = [[],[],[],[]]
+	document.write("<table border = 3>");
+	document.write("<th><h3><br></h3></th>");
+	document.write("<th>NP1 Escrita</th>");
+	document.write("<th>NP1 PrÃ¡tica</th>");
+	document.write("<th>NP2 Escrita</th>");
+	document.write("<th>NP2 PrÃ¡tica</th>");
+	var aluno = 0;
+	for(i=0; i<4; i++){
+		document.write("<tr>");
+		aluno = i + 1;
+		document.write("<th>Aluno " + aluno + "<br><br></th>");
+		for(j=0; j<4; j++){
+			document.write("<td>");
+			//matrix[i][j] = (Math.random()*10).toFixed(1);//prompt("");
+			document.write(matrix[i][j]);
+			document.write("</td>");
+		}
+		document.write("</tr>");
+	}
+	document.write("</table>");
+</script>
+
+<html><br>Escreva um programa que utilize uma matriz 5 x 4 para realizar cada uma das seguintes tarefas:<br></html>
+<html><br>a) Leia as notas dos alunos;<br>b) Informe a mÃ©dia do â€œAluno 4â€ ao longo do semestre de acordo com os valores constantes na matriz;<hr></html><br>
+
+<script>
+	matrix = [[],[],[],[]];
+	document.write("<table border = 3>");
+	document.write("<th><h3><br></h3></th>");
+	document.write("<th>NP1 Escrita</th>");
+	document.write("<th>NP1 PrÃ¡tica</th>");
+	document.write("<th>NP2 Escrita</th>");
+	document.write("<th>NP2 PrÃ¡tica</th>");
+	mÃ©dia = [[],[],[],[]];
+	var aluno = 0;
+	var soma = 0;
+	for(i=0; i<4; i++){
+		document.write("<tr>");
+		aluno = i + 1;
+		document.write("<th>Aluno " + aluno + "<br><br></th>");
+		for(j=0; j<4; j++){
+			document.write("<td>");
+			matrix[i][j] = parseInt(Math.random()*10);//prompt("");
+			document.write(matrix[i][j]);
+			if(i==3){
+				mÃ©dia[j] = matrix[i][j];
+				soma = soma + mÃ©dia[j];
+			}
+			document.write("</td>");
+		}
+		document.write("</tr>");
+	}
+	document.write("</table>");
+	soma = soma/4;
+	document.write("<br>MÃ©dia do aluno 4: " + soma + "<br><br><br>");
+	
+</script>
+
+
+
+
+

@@ -1,0 +1,20 @@
+﻿https://github.com/raulfontenele/Algoritmo-e-Programa-o-de-Computadores
+
+
+Leia uma matriz que armazene as distâncias entre as cidades desta região conforme o modelo acima;
+
+Calcule a maior distância entre duas cidades;
+
+Calcule e mostre as quais cidades guardam entre si a distância calculada no item anterior;
+
+Questao 4
+
+Calcule e mostre na tela a distância percorrida por um viajante que realiza o seguinte trajeto, cidades: 0, 2, 3, 1 e 4.
+
+Leia em vetor um trajeto de 5 cidades escolhidas pelo usuário.
+
+Calcule e mostre a distância percorrida por um viajante que faça o trajeto lido no item anterior.
+
+Questao 1
+
+

@@ -1,0 +1,32 @@
+<script>
+
+/* 2) Escreva um programa que leia 10 números digitados pelo usuário. 
+Grave os 5 primeiros números em um vetor e os 5 últimos 
+em um segundo vetor. Troque todos os elementos do primeiro vetor com os elementos 
+ do segundo vetor e ao final mostre todos os elementos dos dois vetores.*/
+
+vetorA = [];
+vetorB = [];
+vetor = [];
+
+for(i=0;i<5;i++){
+	vetorA[i] = parseInt(Math.random()*10);
+}
+for(i=5;i<10;i++){
+	vetorB[i] = parseInt(Math.random()*10);
+}
+console.log(vetorA);
+console.log(vetorB);
+
+for(i=0;i<10;i++){
+	if(i < 5){
+		vetor[i] = vetorA[i];
+	}else{
+		vetor[i] = vetorB[i];
+	}
+}
+
+
+console.log(vetor)
+
+</script>

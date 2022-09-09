@@ -1,0 +1,48 @@
+<html>
+
+<body>
+    <script>
+        function randomMaxMin(min, max) {
+            return Math.random() * (max - min) + min
+        }
+
+        function write(f) {
+            document.write(f + "<br>")
+        }
+
+        var vetA = [],
+            tam, aux = 0,
+            menor = vetA[0],
+            h = 0;
+        tamanh = parseInt(randomMaxMin(1, 12))
+
+        for (i = 0; i < tamanh; i++) {
+            vetA[i] = parseInt(randomMaxMin(0, 35))
+        }
+
+        console.log(vetA)
+
+        function vetCrescente(vet) {
+
+            var tam = vet.length,
+                aux;
+
+            for (i = 0; i < tam; i++) {
+                for (j = 0; j < i; j++) {
+                    if (vet[i] < vet[j]) {
+                        aux = vet[i]
+                        vet[i] = vet[j]
+                        vet[j] = aux
+                    }
+                }
+            }
+
+            return vet
+            console.log('vetor: ' + vetA)
+        }
+
+        write('vetor: ' + vetA + '<p>VetorCrescente = ' + vetCrescente(vetA))
+    </script>
+</body>
+
+</html>

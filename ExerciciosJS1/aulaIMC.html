@@ -1,0 +1,72 @@
+!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function mostra(f){
+			document.write(f+ "<br>");
+		}
+		function Imc(peso, altura){
+			var x = peso/(altura**2);
+			return x;
+		}
+		
+			var nome =  prompt("Nome : ");
+			var peso = 	parseFloat(prompt("Peso : "));
+			var altura = parseFloat(prompt("Altura : "));
+			mostra(nome + ":")
+			mostra("peso: " + peso);
+			mostra("altura: " + altura+ "<p>");
+				
+			var nome1 =  prompt("Nome : ");
+			var peso1 = 	parseFloat(prompt("Peso : "));
+			var altura1 = parseFloat(prompt("Altura : "));
+			mostra(nome1 + ":")
+			mostra("peso: " + peso1);
+			mostra("altura: " + altura1 + "<p>");
+
+			var nome2 =  prompt("Nome : ");
+			var peso2 = 	parseFloat(prompt("Peso : "));
+			var altura2 = parseFloat(prompt("Altura : "));
+			mostra(nome2 + ":")
+			mostra("peso: " + peso2);
+			mostra("altura: " + altura2 + "<p>" );
+
+			var imc0 = Imc(peso, altura);
+			var imc1 = Imc(peso1, altura1);
+			var imc2 = Imc(peso2, altura2);
+ 
+			if( imc0 <= 19.5){
+		  		mostra(nome + ", seu peso esta abaixo da media, voce esta muito magro");
+			}
+		  	if(imc0 > 24.9){
+		  		mostra(nome +", Seu peso esta acima da media,precisa imagrecer");
+		  	}
+		  	else{
+		  		mostra(nome + " ta da boa, continua vivendo sua vida. vida boa vida boa");
+		  	}
+		  		if( imc1 <= 19.5){
+		  		mostra(nome1 + ", seu peso esta abaixo da media, voce esta muito magro");
+				}
+			  	if(imc1 > 24.9){
+			  		mostra(nome1 +", Seu peso esta acima da media,precisa imagrecer");
+			  	}
+			  	else{
+			  		mostra(nome1 + " ta da boa, continua vivendo sua vida. vida boa vida boa");	
+			  	}
+		  			if( imc2 <= 19.5){
+		  				mostra(nome2 + ", seu peso esta abaixo da media, voce esta muito magro");
+					}
+				  	if(imc2 > 24.9){
+				  		mostra(nome2 + ", Seu peso esta acima da media,precisa imagrecer");
+				  	}
+				  	else{
+				  		mostra(nome2 + " ta da boa, continua vivendo sua vida. vida boa vida boa");	
+				  	}
+				  	
+	</script>
+
+</body>
+</html>

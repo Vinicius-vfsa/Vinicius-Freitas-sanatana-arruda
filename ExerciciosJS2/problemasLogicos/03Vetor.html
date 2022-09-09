@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>ALl Your Breath take</title>
+    </head>
+    <body>
+       
+        <hr>
+        <p>3. Faça um programa que preencha dois vetores de dez elementos numéricos cada um e mostre o vetor resultante da intercalação deles.</p>
+        <img src="../Vetores/img/qq3.png">
+        <hr>
+        <script>
+
+            function mathIntRandom(num) {
+                Math.floor(Math.random()*num)
+            }
+
+            var vetorA =[]
+            var troc_vet = []
+            var vetorB = []
+            let a, j, i;
+            for(i=0;i<2;i++){
+                vetorA[i] = Math.floor(Math.random()*50) //parseInt(prompt('numero'))
+                troc_vet[i] = vetorA[i]
+                vetorB[i]= Math.floor(Math.random()*50) //parseInt(prompt('numero'))
+            }
+
+
+
+            console.log(vetorA)
+            console.log(vetorB)
+            console.log(troc_vet)
+
+        </script>
+    </body>
+</html>
