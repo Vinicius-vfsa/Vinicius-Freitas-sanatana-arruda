@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TabelaHtml</title>
+        <meta charset="UTF-8">
+        <style>
+        table,th,td{
+           border: 2px solid rgb(43, 108, 151)
+           
+        }
+        th{
+            background-color: rgb(160, 156, 156)
+        }
+        td{
+            background-color: rgb(18, 221, 221)
+        }
+        </style>
+    </head>
+    <body>
+        <h1>tabelahtml</h1>
+            <p>Tabela </p>
+        <script>
+            var colunas,t;
+            colunas = parseInt(prompt("Indique Numero de colunas: "))
+            document.write("<table style= width: 100%>")
+            for(l=0;l<1;l++){
+                document.write("<tr>")
+                document.write("<th >"+"  "+"</th>")
+                for(c=0;c<colunas;c++){
+                    //var n = prompt("Digite titulo da "+(c+1)+" coluna: ")
+                    document.write("<th>")
+                    document.write('Coluna '+(c+1))
+                    document.write("</th>")
+                }
+                document.write("</tr>")
+            }
+            for(c=0;c<colunas;c++){
+                //var n =  prompt("Digite titulo da "+(l+1)+" Linha")
+                document.write("<tr>")
+                document.write("<th align = center> Linha "+(c+1)+"</th>")
+                for(l=0;l<colunas;l++){
+                    var n = parseInt(Math.random()*100)
+                    document.write("<td align = center>")
+                    document.write(n)
+                    document.write("</td>")
+                }
+                document.write("</tr>")
+            }
+            document.write("</table>")
+        </script>
+    </body>
+</html>

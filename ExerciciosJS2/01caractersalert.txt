@@ -1,0 +1,26 @@
+Outros caracteres útieis (apesar nunca ter usado alguns) são:
+ 
+
+\b - backspace
+
+\f - form feed
+
+\n - new line
+
+\r - carriage return
+
+\t - Tabulação horizontal
+
+\v - tabulação vertical
+
+\' - aspas simples
+
+\" - aspas duplas
+
+\\ - barra invertida
+
+\XXX - caractere no formato Latin-1 (XXX é um valor octal entre 0 e 377)
+
+\xXX - caractere no formato Latin-1 (XX é um valor hexadecimal entre 00 e FF)
+
+\uXXXX - caractere no formato Unicode, especificado por um valor hexadecimal de 4 dígitos. O navegador deve suportar Unicode e o sist.op. deve ter as fontes instaladas para que os caracteres sejam visualizados

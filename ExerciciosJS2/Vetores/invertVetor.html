@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<title>Ivert Vetor</title>
+
+<body>
+
+    <script>
+        function randomMaxMin(min, max) {
+            return Math.random() * (max - min) + min
+        }
+
+        function write(f) {
+            document.write(f + "<br>");
+        }
+
+        var x = [7, 5, 6, 9, 3, 8],
+            y = [],
+            h = 0,
+            tam = x.length - 1;
+
+        console.log(x)
+
+        for (i = 0; i <= tam / 2; i++) {
+            h = x[i]
+            x[i] = x[tam - i]
+            x[tam - i] = h
+        }
+
+        console.log(x)
+    </script>
+
+</body>

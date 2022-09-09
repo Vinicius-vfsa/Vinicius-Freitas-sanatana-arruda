@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+	<script>
+
+	function Fatorial(n){ // function fatorial (n,r = 2) { return n! }*/
+	var resultado = 1;
+		for(i=1;i <= n;i++){
+			 resultado = resultado * i;
+		}
+		//document.write("O Fatorial de "+n+"! = "resultado);
+		return resultado;
+	}
+
+	var pergunta = parseInt(prompt("Digite 1-Arranjo e 2-Combinação"));
+
+	if (pergunta == 1) {
+		var n = parseFloat(prompt("Digite o valo de n: "));
+		var r = parseFloat(prompt("Digite o valo de r: "));
+		var Arj = Fatorial(n)/Fatorial(n-r);
+			document.write("O Arranjo de n!/(n-r)! e = " + Arj.toFixed(2) );
+	}
+	if(pergunta == 2){
+		var n = parseFloat(prompt("Digite o valo de n: "));
+		var r = parseFloat(prompt("Digite o valo de r: "));
+		var comb = Fatorial(n)/Fatorial(n)*Fatorial(n-r);
+		document.write("A combinação de "+n+"!/"+n+"!.("+n+" - "+r+")! = "+comb.toFixed(2))
+	}
+	</script>

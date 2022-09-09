@@ -1,0 +1,18 @@
+<h2> Vetor1.1 Segunda aula</h2>
+<script>
+//declarando variavel vetor
+var indice, exemploVetor, tamanho;
+
+exemploVetor = [0, 1, 4, 3, 25];
+tamanho = exemploVetor.length; //descobrindo tamanho do vetor
+
+numero = parseInt(prompt("qual numero gostaria de achar [0,1,4,3,25,40]"))
+for(indice = 0 ; indice < tamanho ; indice++)
+{
+	if(exemploVetor[indice] == 25)
+	{
+		document.write("Achei o 25! na posição " + indice +)
+	}
+	document.write("exemplovetor["+indice+"] = " + exemploVetor[indice] + "<br>")
+}
+</script>

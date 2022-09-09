@@ -1,0 +1,30 @@
+<script>
+    var i, x, y, a, b;
+    var vetor = [];
+    var vetor1 = [];
+    for(i=0;i<10;i++) {
+        vetor[i] = parseInt(Math.random() * 100);
+        vetor1[i] = vetor[i];
+    }
+    console.log(vetor);
+
+var decrescent = [];
+var maior = vetor[0];//criar
+var x;
+
+for(i=0;i < 10;i++){
+    maior = [0];
+    for(j=0;j<10;j++){
+        if(vetor[j] > maior){
+            maior = vetor[j];
+            x = j
+            
+        }
+    }
+    decrescent[i] = maior;
+    vetor[x] = 0
+}
+
+    document.write("vetor: "+vetor1+"<p>"+"Decrescente numeros: "+decrescent);
+    console.log(maior)
+</script>}

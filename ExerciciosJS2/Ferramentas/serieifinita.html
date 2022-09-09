@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h3>serie infinita</h3>
+    <p> S = (x/!1) - (x³/!3) + (x^5/!5) - ...</p>
+    <script>
+        function fatorial(f) {
+            for (n = f; n > 1; n--) {
+                f = f * (n - 1)
+            }
+        }
+
+        var s;
+        var soma_s = 0;
+        var sinal = -1;
+
+        function serie(t, x) {
+            x = parseFloat(x)
+            var d = 1;
+            for (i = 0; i < t; i++) {
+                s = (x ** d) / fatorial(d)
+                d += 2
+                soma_s += (sinal * s)
+                sinal = -sinal
+            }
+        }
+
+        var termos = parseInt(prompt('numero de termos: '))
+        var x = prompt('Numero: ')
+        serie(termos, x)
+
+    </script>
+</body>
+
+</html>

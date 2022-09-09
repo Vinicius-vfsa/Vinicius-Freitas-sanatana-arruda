@@ -1,0 +1,43 @@
+
+<html>
+    <body>
+    <script>
+        var i = 0;
+        var vetor = [];
+        var bck_v = [];
+        var crescente = [];
+        var menor;
+        var x;
+
+
+        for(i=0;i<10;i++){
+            vetor[i] = parseInt(Math.random()*80);
+            bck_v[i] = vetor[i];
+        }
+        
+        var maior = vetor[0]
+
+        for(i=0;i<10;i++){
+            if(vetor[i] > maior){
+                maior = vetor[i];
+            }
+        }
+
+        for(i=0;i < 10;i++){
+            menor = maior;
+            for(j=0;j<10;j++){
+                if(vetor[j] < menor){
+                    menor = vetor[j];
+                    x = j
+                }
+            }
+            crescente[i] = menor;
+            vetor[x] = maior
+        }
+
+        document.write("vetor: "+bck_v+"<p>"+"Crescente vetor: "+crescente);
+        console.log(vetor);
+
+    </script>
+    </body>
+</html>

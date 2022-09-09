@@ -1,0 +1,21 @@
+<script>
+var i, x, y, a, b;
+var vetor = [];
+
+for(i=0;i<10;i++){
+    vetor[i] = parseInt(Math.random()*101);
+}
+
+console.log(vetor);
+
+var Maior = vetor[0];
+
+for(i=0;i < 10;i++){
+    if(vetor[i] > Maior){
+        Maior = vetor[i]
+    }
+}
+
+document.write("vetor: "+vetor+"<p>"+"Maior numero: "+Maior);
+
+</script>

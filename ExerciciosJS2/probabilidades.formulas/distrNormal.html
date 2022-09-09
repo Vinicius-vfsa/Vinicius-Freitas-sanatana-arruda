@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DistribuiçãoNormal</title>
+	<h3>Distribuição Normal<br></h3>
+	<h5>Autor: Vinicius Freitas Santana Arruda<br>Data: 06/05/2019<br>Versão: 1.0</h5><hr>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		
+		function mostra(f){
+			document.write(f + "<br>")
+		}
+
+	
+		media = parseFloat(prompt("Média: "))
+		variancia = parseFloat(prompt("Desvio Padrão: ")) 
+		pergunta = parseInt(prompt("valor : unico (0), duplo (1): "))
+
+		if(pergunta == 1){
+			x1 = parseFloat(prompt("Primeiro valor: ")) 
+			console.log("x1: "+x1)
+			x2 = parseFloat(prompt("Segundo valor: "))
+			console.log("x2: "+x2)
+			z1 = (x1- media)/variancia
+			z1 = z1.toFixed(2)
+			console.log("z1: "+z1)
+			z2 = (x2 - media)/variancia
+			z2 = z2.toFixed(2)
+			console.log("z2: "+z2)
+			z1tb =  parseFloat(prompt("indique numero "+z1+" da tabela: "))
+			z2tb =  parseFloat(prompt("indique numero "+z2+" da tabela: "))
+			soma = z1tb + z2tb
+			console.log("z1tb: "+z1tb)
+			console.log("z2tb: "+z2tb)
+			mostra("Z = "+ soma.toFixed(4))
+
+		}
+		if(pergunta == 0){
+			xi = parseInt(prompt(" > (0) ou < (1)"))
+			x = parseFloat(prompt("valor: ")) 
+			z1 = (x - media)/variancia
+			z1 = z1.toFixed(2)
+			z1Tb = parseFloat(prompt("indique numero "+ z1 +" da tabela: "))
+			if(xi == 0){
+				if(z1 < 0){
+					soma = 0.5 + z1Tb
+				}else{
+					soma = 0.5 - z1Tb
+				}
+			}else{
+				if(z1 > 0){
+					soma = 0.5 + z1Tb
+				}else{
+					soma = 0.5 - z1Tb
+				}
+			}
+			console.log("X : "+x)
+			console.log("Z1: "+z1)
+			console.log("z1tb: "+ z1Tb)
+			mostra("Z = " + soma.toFixed(4))
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Questão 4</title>
+    <style>
+        table,th,td{
+            border: 1px solid rgb(26, 21, 21)
+        }
+        th{
+            background-color: rgba(134, 137, 134, 0.78)
+
+        }
+        td{
+            background-color: rgb(18, 221, 221)
+        }
+    </style>
+</head>
+<body>
+<hr> <h2>Questão 4</h2>
+<p>Leia uma matriz que armazene as distâncias entre as cidades desta região conforme o modelo acima;<br>
+
+    a) Calcule a maior distância entre duas cidades;<br>
+    b} Calcule e mostre as quais cidades guardam entre si a distância calculada no  item anterior;<br>
+    c) Calcule e mostre na tela a distância percorrida por um viajante que realiza  o seguinte trajeto, cidades: 0, 2, 3, 1 e 4.<br>
+    d) Leia em vetor um trajeto de 5 cidades escolhidas pelo usuário.<br>
+    e) Calcule e mostre a distância percorrida por um viajante que faça o trajeto lido no item anterior.</p><hr>
+<script>
+
+    function randomMaxMin(min, max){
+        return Math.random() * (max - min) + min;
+    }
+
+    var colunas = 5; //parseInt(prompt("Indique Numero de colunas: "))
+    var linhas = 5; //parseInt(prompt("Quantidade de Funcionarios: "))
+
+    var matriz = new Array(linhas);
+    var maior = 0;
+    //var auxj=0,auxi=0;
+
+
+
+    
+
+    for(i=0;i<linhas;i++) {
+        matriz[i] = new Array(colunas)
+    }
+
+    for(i=0;i<linhas;i++) {
+        for (j = 0; j < colunas; j++) {
+            dist = parseInt(randomMaxMin(5, 101))
+            matriz[i][j] = dist;
+            matriz[j][i] = dist;
+            if (i == j) {
+                matriz[i][j] = 0;
+            }
+        }
+    }
+
+    var x = 0
+    var somadistanciaarray = new Array(5);
+    var somadistancia = 0;
+    var mti = new Array(5);
+    var mtj = new Array(5);
+
+    for(i=0;i<linhas;i++) {
+        for (j = 0; j < colunas; j++) {
+           if(i==0 && j==2 || i==2 && j==3 ||i==3 && j==1 || i==1&& j==4){
+                somadistancia = somadistancia + matriz[i][j];
+                somadistanciaarray[x] = somadistancia;
+                mti[x] = i;
+                mtj[x] = j;
+                x++
+            }
+        }
+    }
+    console.log(matriz)
+    console.log(mti);
+    console.log(mtj);
+    console.log(somadistanciaarray);
+    for(i=0;i<linhas;i++){
+        for(j=0;j<colunas;j++){
+            if (matriz[i][j] > maior && matriz[j][i] > maior) {
+                maior = matriz[i][j];
+                auxi = i;
+                auxj = j;
+            }
+        }
+    }
+    var g  = 1
+    document.write("<table  max-style='width: 100%' >")
+    document.write("<caption> distâncias entre Cidades </caption>")
+    for(l=0;l<1;l++){
+        document.write("<tr>");
+        document.write("<th>"+"  "+"</th>");
+        for(c=0;c<colunas;c++) {
+            document.write("<th>")
+            document.write("Cidade "+ (c+g))
+            document.write("</th>")
+        }
+        document.write("</tr>");
+    }
+
+    for(c=0;c<linhas;c++){
+        //var n =  prompt("Digite titulo da "+(l+1)+" Linha")
+        document.write("<tr>");
+        document.write("<th align = center> Cidade "+(c+g)+" </th>");
+        for(l=0;l<colunas;l++){
+            document.write("<td align='center' >")
+            document.write(matriz[c][l])
+            document.write("</td>")
+        }
+        document.write("</tr>");
+    }
+    document.write("</table>")
+    document.write("<p>")
+    document.write("<table>")
+    document.write("<caption>Maior distâncias entre Cidades </caption>")
+    for(l=0;l<1;l++){
+        document.write("<tr>");
+        document.write("<th>"+"  "+"</th>");
+        for(c=0;c<1;c++) {
+            document.write("<th>")
+            document.write("Cidade "+ (auxj+g))
+            document.write("</th>")
+        }
+        document.write("</tr>");
+    }
+
+    for(c=0;c<1;c++){
+        //var n =  prompt("Digite titulo da "+(l+1)+" Linha")
+        document.write("<tr>");
+        document.write("<th align = center> Cidade "+(auxi+g)+" </th>");
+        for(l=0;l<1;l++){
+            document.write("<td>")
+            document.write(matriz[auxi][auxj])
+            document.write("</td>")
+        }
+        document.write("</tr>");
+    }
+    document.write("</table>")
+
+    document.write("<p>")
+    for(i=0;i<1;i++){
+        for(j=0;j<4;j++){
+            document.write(" <tr><td>Cidade["+(mti[j]+g)+"]</td> + <td>Cidade["+(mtj[j]+g)+"]</td>= </tr>"+somadistanciaarray[j]+" mais ");
+        } 
+    }
+
+</script>
+</body>
+</html>

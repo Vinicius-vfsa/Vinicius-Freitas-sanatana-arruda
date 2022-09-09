@@ -1,0 +1,46 @@
+
+<script>
+
+/*4) Escreva um programa que leia 10 números digitados pelo usuário. 
+Grave os 5 primeiros números em um vetor e os 5 últimos em um segundo vetor.
+ Percorra os dois vetores e mostre na tela a soma do maior elemento do primeiro vetor 
+ com o menor elemento do segundo vetor.
+*/ 
+
+var vetorA = [];
+var vetorB = [];
+var vetor = [];
+
+for(i=0;i<5;i++){
+	vetorA[i] = parseInt(Math.random()*10);
+}
+for(i=5;i<10;i++){
+	vetorB[i] = parseInt(Math.random()*10);
+}
+console.log(vetorA);
+console.log(vetorB);
+
+var maior = vetorA[0];
+var menor = vetorB[5];
+
+for(i=0;i<10;i++){
+	if(i < 5){
+		if(vetorA[i] > maior){
+			maior = vetorA[i];
+		}
+	}
+	if(i >= 5){
+		if(vetorB[i] < menor){
+			menor = vetorB[i]
+		}
+	}
+}
+
+console.log(maior)
+console.log(menor)
+
+var soma = maior + menor
+
+document.write("soma do maior vetorA  c/ menor vetorB = " + soma)
+
+</script>

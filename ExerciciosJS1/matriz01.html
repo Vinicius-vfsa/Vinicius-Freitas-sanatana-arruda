@@ -1,0 +1,29 @@
+<body> Criando Matriz em Tabela<br>
+<script type="text/javascript">
+var m = parseInt(Math.random()*10)
+var n = parseInt(Math.random()*10)
+var matrix = []
+document.write("<table border = 3>");
+	document.write("<th><h3><br>MATRIZ " + n + "/" + m + "</h3></th>");
+for(i=0;i<m;i++){
+	matrix[i] = []
+	for(j=i;j<m;j++){
+		matrix[j] = 
+	}
+}
+	for(i=0; i<m; i++){
+		document.write("<th>coluna " + i + "</th>");
+	}
+	for(i=0; i<n; i++){
+		document.write("<tr>");
+		document.write("<th>LINHA " + i + "</th>");
+		for(j=0; j<m; j++){
+			document.write(matrix[i][j]);
+			document.write("</td>");
+		}
+		document.write("</tr>");
+	}
+	document.write("</table>");
+</script>
+<p>
+</body>
